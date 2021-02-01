@@ -16,9 +16,8 @@ esriConfig.portalUrl = 'https://gisportal.vernonia-or.gov/portal';
 
 const mill = new MapImageLayer({
   portalItem: {
-    id: '180b6898a8664e7580f5454cb41416f9',
+    id: '8b656510513a4bd7a2a82356118db5ab',
   },
-  opacity: 0.4,
 });
 
 const view = new MapView({
@@ -35,12 +34,12 @@ const view = new MapView({
   }),
   extent: new Extent({
     spatialReference: {
-      wkid: 102100,
+      wkid: 102100
     },
-    xmin: -13714517,
-    ymin: 5756035,
-    xmax: -13710781,
-    ymax: 5758249,
+    xmin: -13712544.899086168,
+    ymin: 5757024.595500431,
+    xmax: -13711777.542981794,
+    ymax: 5757460.52542743
   }),
   constraints: {
     rotationEnabled: false,
@@ -52,6 +51,7 @@ view.when((): void => {
   view.ui.add(
     new MadeWith({
       color: '#FFFFFF',
+      size: '14px',
     }),
     'bottom-left',
   );
@@ -59,8 +59,10 @@ view.when((): void => {
 
 const app = new FullMap({
   view,
-  title: 'Oregon-American Mill',
+  title: 'Oregon American Mill',
   container: document.createElement('div'),
 });
 
 document.body.append(app.container);
+
+console.log(view)

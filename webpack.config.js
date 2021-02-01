@@ -14,8 +14,8 @@ const path = require('path');
  */
 
 // Application information.
-const title = 'Oregon-American Mill';
-const description = 'Interactive map of Oregon-American Mill in Vernonia, Oregon.';
+const title = 'Oregon American Mill';
+const description = 'Interactive map of Oregon American Lumber Co. mill in Vernonia, Oregon.';
 const themeColor = '#FFFFFF';
 const deployUrl = 'https://oregon-american-mill.netlify.app';
 const appImageUrl = 'socialcard.png';
