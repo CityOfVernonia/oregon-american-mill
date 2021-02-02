@@ -12,6 +12,9 @@ import FullMap from 'cov/layouts/FullView';
 import Home from '@arcgis/core/widgets/Home';
 import MadeWith from 'cov/widgets/MadeWith';
 
+// need type definition
+import Share from 'cov-arcgis-esm/src/widgets/Share';
+
 esriConfig.portalUrl = 'https://gisportal.vernonia-or.gov/portal';
 
 const mill = new MapImageLayer({
@@ -55,6 +58,10 @@ view.when((): void => {
     }),
     'bottom-left',
   );
+  view.ui.add(
+    new Share(),
+    'bottom-right',
+  );
 });
 
 const app = new FullMap({
@@ -64,5 +71,3 @@ const app = new FullMap({
 });
 
 document.body.append(app.container);
-
-console.log(view)
